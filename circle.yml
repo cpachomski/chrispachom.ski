@@ -1,0 +1,7 @@
+
+
+deployment:
+    prod:
+      branch: master
+      commands:
+        - aws s3 sync ./index.html s3://s3.amazonaws.com/chrispachom.ski --delete
