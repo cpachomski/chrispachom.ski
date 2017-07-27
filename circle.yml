@@ -10,4 +10,4 @@ deployment:
     prod:
       branch: master
       commands:
-        - aws s3 sync /home/ubuntu/index.html s3://s3.amazonaws.com/chrispachom.ski --delete
+        - aws s3 sync . s3://chrispachom.ski --delete
