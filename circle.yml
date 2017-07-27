@@ -1,4 +1,7 @@
 
+test:
+  override:
+    - echo "Tests are currently disabled. To disable, remove this block from circle.yml"
 
 deployment:
     prod:
