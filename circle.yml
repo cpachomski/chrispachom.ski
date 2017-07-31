@@ -1,6 +1,7 @@
 dependencies:
     override:
         - sudo pip install awscli
+        - aws configure set preview.cloudfront true
 
 test:
   override:
