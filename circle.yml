@@ -11,3 +11,4 @@ deployment:
       branch: master
       commands:
         - aws s3 sync . s3://chrispachom.ski --delete
+        - aws cloudfront create-invalidation --distribution-id $distributionId --paths '/*''
