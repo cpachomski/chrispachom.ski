@@ -1,0 +1,51 @@
+#web-svg {
+    position: relative;
+    width: 50%;
+    width: 100%;
+    margin: 0 auto;
+    vertical-align: middle;
+    overflow: hidden;
+    &:hover {
+      cursor: pointer;
+    }
+  > svg {
+    display: inline-block;
+    > path {
+      fill: #333;
+    }
+  }
+
+  #monitor {
+    width: 175px;
+    display: block;
+    margin: 0px auto 15px;
+  }
+
+  #keyboard {
+    display: block;
+    margin: 15px auto 0px;
+  }
+
+  #code-box {
+    font-family: 'Share Tech Mono', monospace;
+    position: absolute;
+    white-space:pre;
+    height: 55px;
+    width: 135px;
+    left: calc(50% + 0px);
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 9px;
+    transform: translate(-50%);
+    top: 7px;
+    line-height: 12px;
+    @media screen and (max-width: 580px) {
+      width: 150px;
+      line-height: 13px;
+      font-size: 9px;
+      left: calc(50% + 9px);
+      top: 5px;
+    }
+
+  }
+}

@@ -1,0 +1,119 @@
+#title{
+	border-right: 4px solid #333;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+	justify-content: space-between;
+}
+
+.title--name {
+	display: flex;
+
+}
+
+.title-row {
+	color: #333;
+	font-family: Montserrat;
+
+	&:nth-child(2) {
+		padding-left: 25px;
+	}
+
+	.name > span {
+		font-size: 35px;
+		display: block;
+		text-transform: uppercase;
+	}
+}
+
+#location {
+	span {
+		font-family: Montserrat;
+		line-height: 25px;
+		font-size: 14px;
+	}
+}
+
+
+
+.social-container {
+	text-align: center;
+	display: flex;
+	margin-top: 15px;
+	justify-content: space-between;
+
+	a {
+		text-align: center;
+		color: #333;
+		i {
+			font-size: 35px;
+			line-height: 20px;
+		}
+	}
+}
+
+//tablet and small desktop
+@media screen and (max-width: 992px) {
+	
+	#location {
+		span {
+			font-size: 12px;
+		}
+	}
+	.social-container {
+		a > i { 
+			font-size: 24px;
+		}
+	}
+	
+}
+
+//mobile
+@media screen and (max-width: 580px) {
+
+	#title {
+		width: calc(100% - 100px);
+		position: fixed;
+		border-right: 0px;
+		border-bottom: 4px solid #333;
+		z-index: 200;
+		background: white;
+		padding: 35px 50px;
+		min-width: 350px;
+
+	}
+
+	.title-row:nth-child(2) {
+		padding-left: 0px;
+	}
+
+	.title--name {
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	.title-row {
+		width: 100%;
+
+		.name > span {
+			display: inline;
+			font-size: 25px;
+		}
+	}
+
+	#location {
+		> span {
+			display: block;
+		}
+	}
+
+	.social-container {
+		margin-top: 20px;
+		max-width: 175px;
+		a > i {
+			font-size: 30px;
+		}
+	}
+
+}

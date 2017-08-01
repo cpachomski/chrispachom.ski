@@ -1,0 +1,41 @@
+body {
+	min-width: 320px;
+}
+
+#home {
+	max-width: 768px;
+	margin: 25px auto;
+	border: 4px  solid #000;
+	display: flex;
+	transition: all 0.4s ease-in;
+
+	@media screen and (min-width: 581px) {
+		transform: translate3d(14px, 14px, 0px);
+		&.active {
+			transform: translate3d(0px, 0px, 0px);
+			-webkit-box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000, 9px 9px #000, 10px 10px #000, 11px 11px #000, 12px 12px #000, 13px 13px #000, 14px 14px #000;
+		  	-moz-box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000, 9px 9px #000, 10px 10px #000, 11px 11px #000, 12px 12px #000, 13px 13px #000, 14px 14px #000;
+		  	-ms-box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000, 9px 9px #000, 10px 10px #000, 11px 11px #000, 12px 12px #000, 13px 13px #000, 14px 14px #000;
+		  	-o-box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000, 9px 9px #000, 10px 10px #000, 11px 11px #000, 12px 12px #000, 13px 13px #000, 14px 14px #000;
+		  	box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000, 7px 7px #000, 8px 8px #000, 9px 9px #000, 10px 10px #000, 11px 11px #000, 12px 12px #000, 13px 13px #000, 14px 14px #000;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#home {  
+		max-width: 480px;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	#home {
+		margin: 0 auto;
+		max-width: 100%;
+		height: 90%;
+		box-shadow: none;
+		border: 0px;
+		flex-direction: column;
+		transition: all 0s;
+	}
+}

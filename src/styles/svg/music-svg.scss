@@ -1,0 +1,15 @@
+#music-svg {
+  position: relative;
+  width: 150px;
+  margin: 0px auto;
+  display: block;
+}
+
+#speaker {
+    transform: translateX(-50%);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    fill: #fff;
+
+}
