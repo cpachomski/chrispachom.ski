@@ -13,7 +13,7 @@ import './styles/links.scss'
 //import svg scripts
 import WebSvg from './scripts/svg/web-svg'
 import MusicSvg from './scripts/svg/music-svg'
-import Work from './scripts/svg/work-svg'
+import WorkSvg from './scripts/svg/work-svg'
 import ContentOverlay from './scripts/content-overlay'
 
 //runner
@@ -23,12 +23,8 @@ let $workBox = $('#work-svg')
 let $contentOverlays = $('.content-overlay')
 
 $(document).ready(() => {
-  const web = new WebSvg($webBox)
-  const music = new MusicSvg($musicBox)
-  const work = new Work($workBox)
-  //oo thats nice
-
   setTimeout(() => {
+    //oo thats nice
     $('body').fadeIn(500)
 
     if (window.innerWidth > 580) {
@@ -37,6 +33,12 @@ $(document).ready(() => {
       }, 500)
     }
   }, 1000)
+
+  setTimeout(() => {
+    const web = new WebSvg($webBox)
+    const music = new MusicSvg($musicBox)
+    const work = new WorkSvg($workBox)
+  }, 2000)
 
   $(window).resize(() => {
     if (window.innerWidth < 580) {

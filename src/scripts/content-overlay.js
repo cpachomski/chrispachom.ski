@@ -1,8 +1,6 @@
 import $ from 'jquery'
 
 const init = () => {
-  console.log('init these bad boiz....')
-
   $('.link-box').each((i, link) => {
     $(link).on('click', e => {
       const type = $(link).data('type')

@@ -1,7 +1,7 @@
-import $ from 'jquery'
+import jQuery from 'jquery'
 
 const messages = [
-  'const funForYou = () => {',
+  'var funForYou = function() {',
   '    while(true) { ',
   '    alert("YOLO!")',
   '    }',
@@ -11,16 +11,16 @@ const messages = [
 
 class Web {
   constructor(el) {
-    this.jQuerykeyboard = $('svg#keyboard')
-    this.jQuerycodeBox = $('#code-box')
+    this.jQuerykeyboard = jQuery('svg#keyboard')
+    this.jQuerycodeBox = jQuery('#code-box')
     this.codeText = ''
     this.currentLine = 0
     this.currentChar = 0
-    this.keys = $('#keyboard path:not(#keyboard-outline)')
+    this.keys = jQuery('#keyboard path:not(#keyboard-outline)')
 
     setInterval(() => {
       this.simulateTyping()
-    }, 150)
+    }, 75)
   }
 
   simulateTyping() {
@@ -41,11 +41,11 @@ class Web {
 
       //add indentations for some serious zazz
       if (this.currentLine === 1 && this.currentLine === 3) {
-        this.appendNextChar('&nbsp;&nbsp;')
-        this.appendNextChar('&nbsp;&nbsp;')
+        this.appendNextChar('&nbsp;&nbsp;&nbsp;&nbsp;')
+        this.appendNextChar('&nbsp;&nbsp;&nbsp;&nbsp;')
       } else if (this.currentLine === 2) {
-        this.appendNextChar('&nbsp;&nbsp;')
-        this.appendNextChar('&nbsp;&nbsp;')
+        this.appendNextChar('&nbsp;&nbsp;&nbsp;&nbsp;')
+        this.appendNextChar('&nbsp;&nbsp;&nbsp;&nbsp;')
       }
 
       return
@@ -64,10 +64,10 @@ class Web {
   clickKey(keys) {
     let length = keys.length
     let idx = Math.floor(Math.random() * length)
-    $(keys[idx]).css('transform', 'translateY(2px)')
+    jQuery(keys[idx]).css('transform', 'translateY(2px)')
     window.setTimeout(() => {
-      $(keys[idx]).css('transform', 'translateY(0px)')
-    }, 150)
+      jQuery(keys[idx]).css('transform', 'translateY(0px)')
+    }, 100)
   }
 }
 

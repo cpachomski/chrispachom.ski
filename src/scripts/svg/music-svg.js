@@ -7,17 +7,18 @@ class Music {
     this.ampPath = $(el).find('#amplifier')
     this.ampLight = $(el).find('#amp-light')
 
-    this.ampLight.css({
-      fill: '#ff0000'
-    })
+    setTimeout(() => {
+      setInterval(() => {
+        this.simulateSpeakerVibration()
+      }, 50)
+      this.ampLight.css({
+        fill: '#ff0000'
+      })
 
-    setInterval(() => {
-      this.simulateSpeakerVibration()
-    }, 50)
-
-    setInterval(() => {
-      this.simulateAmplifierShaking()
-    }, 100)
+      setInterval(() => {
+        this.simulateAmplifierShaking()
+      }, 100)
+    }, 1000)
   }
 
   simulateSpeakerVibration() {
