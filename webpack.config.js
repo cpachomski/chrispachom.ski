@@ -1,5 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
+
+console.log(`ENV= ${process.env.NODE_ENV}`)
 
 module.exports = {
   devtool: 'eval',
@@ -24,7 +26,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['uglify-loader', 'react-hot-loader', 'babel-loader'],
+        loaders: ['react-hot-loader', 'babel-loader'],
         include: path.join(__dirname, 'src')
       },
       {
@@ -33,11 +35,14 @@ module.exports = {
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&minetype=application/font-woff"
+        loader: 'url?limit=10000&minetype=application/font-woff'
       },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&minetype=application/octet-stream" },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&minetype=image/svg+xml" }
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&minetype=application/octet-stream'
+      },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&minetype=image/svg+xml' }
     ]
   }
-};
+}

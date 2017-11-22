@@ -1,27 +1,29 @@
-import jQuery from 'jquery';
+import $ from 'jquery'
 
 const init = () => {
-	console.log('init these bad boiz....');
+  console.log('init these bad boiz....')
 
-	jQuery('.link-box').each((i, link) => {
-		jQuery(link).on('click', e => {
-			const type = jQuery(link).data('type');
+  $('.link-box').each((i, link) => {
+    $(link).on('click', e => {
+      const type = $(link).data('type')
 
-			jQuery('#home').removeClass('active');
-			setTimeout(() => {
-				jQuery(`.${type}`).addClass('active');
-			}, 200);
-		});
-	});
+      $('#home').removeClass('active')
+      setTimeout(() => {
+        $(`.${type}`).addClass('active')
+      }, 400)
+    })
+  })
 
-	jQuery('button').each((i, button) => {
-		jQuery(button).on('click', e => {
-			jQuery(e.target).parent().removeClass('active');
-			setTimeout(() => {
-				jQuery('#home').addClass('active');
-			}, 200);
-		});
-	});
-};
+  $('.close-button').each((i, button) => {
+    $(button).on('click', e => {
+      $(e.target)
+        .parent()
+        .removeClass('active')
+      setTimeout(() => {
+        $('#home').addClass('active')
+      }, 400)
+    })
+  })
+}
 
-init();
+init()

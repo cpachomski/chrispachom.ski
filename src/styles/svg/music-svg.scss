@@ -6,10 +6,10 @@
 }
 
 #speaker {
-    transform: translateX(-50%);
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    fill: #fff;
-
+  transform: translateX(-50%);
+  -moz-transform: translateX(0%);
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  fill: #fff;
 }

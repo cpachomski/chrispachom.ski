@@ -1,13 +1,13 @@
 #web-svg {
-    position: relative;
-    width: 50%;
-    width: 100%;
-    margin: 0 auto;
-    vertical-align: middle;
-    overflow: hidden;
-    &:hover {
-      cursor: pointer;
-    }
+  position: relative;
+  width: 50%;
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: middle;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
   > svg {
     display: inline-block;
     > path {
@@ -29,13 +29,14 @@
   #code-box {
     font-family: 'Share Tech Mono', monospace;
     position: absolute;
-    white-space:pre;
+    white-space: pre;
     height: 55px;
     width: 135px;
     left: calc(50% + 0px);
     padding: 5px;
     padding-top: 10px;
     font-size: 9px;
+    text-align: left;
     transform: translate(-50%);
     top: 7px;
     line-height: 12px;
@@ -46,6 +47,5 @@
       left: calc(50% + 9px);
       top: 5px;
     }
-
   }
 }

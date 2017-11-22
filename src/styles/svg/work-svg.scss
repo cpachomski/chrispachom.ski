@@ -1,110 +1,109 @@
 #work-svg {
-    position: relative;
-    width: 150px;
-    margin: 0 auto;
-    display: block;
+  max-height: 210px;
+  position: relative;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
 
-    #coffee-container {
-    	transform: translate(38px, -40px) scale(0.5);
-    }
+  #coffee-container {
+    transform: translate(38px, -40px) scale(0.5);
+  }
 
-    #employee {
-    	transform: rotate(-45deg) translate(80px, -105px);
-    }
+  #employee {
+    transform: rotate(-45deg) translate(80px, -105px);
+  }
 
-    #eyeball {
-		transition: transform 0.3s ease-in;
-    	&.moving {
-    		animation: moveEye 10s ease-in infinite;
-    	}
+  #eyeball {
+    transition: transform 0.3s ease-in;
+    &.moving {
+      animation: moveEye 10s ease-in infinite;
     }
+  }
 
-    #coffee-drip {
-    	transform: translate(86px, -311px);
-		> path {
-			stroke-dasharray: 107;
-			stroke-dashoffset: 106;
-			&.dripping {
-				animation: coffeeDrip 3s ease-in-out infinite;
-			}
-		}
+  #coffee-drip {
+    transform: translate(86px, -311px);
+    > path {
+      stroke-dasharray: 107;
+      stroke-dashoffset: 106;
+      &.dripping {
+        animation: coffeeDrip 3s ease-in-out infinite;
+      }
     }
-  
+  }
 }
 
-
 @keyframes moveEye {
-	0% {
-		transform:  translate(1px, 2px) scale(1);
-	}
+  0% {
+    transform: translate(1px, 2px) scale(1);
+  }
 
-	5% {
-		transform: translate(-3px, -2px);
-	}
+  5% {
+    transform: translate(-3px, -2px);
+  }
 
-	15% {
-		transform: translate(-3px, -2px);
-	}
+  15% {
+    transform: translate(-3px, -2px);
+  }
 
-	20% {
-		transform: translate(-1px, 1px)
-	}
+  20% {
+    transform: translate(-1px, 1px);
+  }
 
-	30% {
-		transform: translate(-46px, -22px) scale(1.7);
-	}
+  30% {
+    transform: translate(-46px, -22px) scale(1.7);
+  }
 
-	35% {
-		transform: translate(-48px, -22px) scale(1.7);		
-	}
+  35% {
+    transform: translate(-48px, -22px) scale(1.7);
+  }
 
-	38% {
-		transform: translate(-49px, -24px) scale(1.7);		
-	}
+  38% {
+    transform: translate(-49px, -24px) scale(1.7);
+  }
 
-	41% {
-		transform: translate(-50px, -22px) scale(1.7);		
-	}
+  41% {
+    transform: translate(-50px, -22px) scale(1.7);
+  }
 
-	44% {
-		transform: translate(-45px, -24px) scale(1.7);		
-	}
+  44% {
+    transform: translate(-45px, -24px) scale(1.7);
+  }
 
-	47% {
-		transform: translate(-43px, -22px) scale(1.7);		
-	}
+  47% {
+    transform: translate(-43px, -22px) scale(1.7);
+  }
 
-	50% {
-		transform: translate(-45px, -20px) scale(1.7);		
-	}
+  50% {
+    transform: translate(-45px, -20px) scale(1.7);
+  }
 
-	52% {
-		transform: translate(-43px, -21px) scale(1.7);		
-	}
+  52% {
+    transform: translate(-43px, -21px) scale(1.7);
+  }
 
-	55% {
-		transform: translate(-45px, -24px) scale(1.7);		
-	}
+  55% {
+    transform: translate(-45px, -24px) scale(1.7);
+  }
 
-	60% {
-		transform: translate(-43px, -20px) scale(1.7);		
-	}
+  60% {
+    transform: translate(-43px, -20px) scale(1.7);
+  }
 
-	90% {
-		transform:  translate(1px, 2px) scale(1);
-	}
+  90% {
+    transform: translate(1px, 2px) scale(1);
+  }
 
-	100% {
-		transform:  translate(1px, 2px) scale(1);
-	}
+  100% {
+    transform: translate(1px, 2px) scale(1);
+  }
 }
 
 @keyframes coffeeDrip {
-	0% {
-		stroke-dashoffset: 106;
-	}
+  0% {
+    stroke-dashoffset: 106;
+  }
 
-	100% {
-		stroke-dashoffset: -50;
-	}
+  100% {
+    stroke-dashoffset: -50;
+  }
 }
