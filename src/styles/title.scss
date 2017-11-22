@@ -22,13 +22,14 @@
   .name > span {
     font-size: 35px;
     display: block;
+    font-weight: bolder;
     text-transform: uppercase;
   }
 }
 
 #location {
   span {
-    font-family: Montserrat;
+    font-family: monospace;
     line-height: 25px;
     font-size: 14px;
   }

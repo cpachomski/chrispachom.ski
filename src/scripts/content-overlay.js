@@ -7,20 +7,18 @@ const init = () => {
 
       $('#home').removeClass('active')
       setTimeout(() => {
-        $(`.${type}`).addClass('active')
+        $(`#${type}-overlay`).addClass('active')
+        $(`#${type}-overlay .close-button`).attr('tab-index', 1)
       }, 400)
     })
   })
 
-  $('.close-button').each((i, button) => {
-    $(button).on('click', e => {
-      $(e.target)
-        .parent()
-        .removeClass('active')
-      setTimeout(() => {
-        $('#home').addClass('active')
-      }, 400)
-    })
+  $('.close-button').on('click', () => {
+    $('.content-overlay.active').removeClass('active')
+    setTimeout(() => {
+      $('.close-button').attr('tab-index', -1)
+      $('#home').addClass('active')
+    }, 400)
   })
 }
 
