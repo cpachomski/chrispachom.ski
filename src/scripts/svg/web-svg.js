@@ -1,4 +1,5 @@
-import jQuery from 'jquery'
+import $ from 'jquery'
+import { isMobile } from '../util'
 
 const messages = [
   'var funForYou = function() {',
@@ -11,21 +12,34 @@ const messages = [
 
 class Web {
   constructor(el) {
-    this.jQuerykeyboard = jQuery('svg#keyboard')
-    this.jQuerycodeBox = jQuery('#code-box')
+    this.jQuerykeyboard = $('svg#keyboard')
+    this.jQuerycodeBox = $('#code-box')
+    this.containingButton = $(el).parent()
     this.codeText = ''
     this.currentLine = 0
     this.currentChar = 0
-    this.keys = jQuery('#keyboard path:not(#keyboard-outline)')
+    this.currentMessage = 0
+    this.keys = $('#keyboard path:not(#keyboard-outline)')
 
-    setInterval(() => {
-      this.simulateTyping()
-    }, 75)
+    this.containingButton.mouseenter(() => {
+      if (isMobile) return
+
+      this.typingInterval = window.setInterval(() => {
+        this.simulateTyping()
+      }, 75)
+    })
+
+    this.containingButton.mouseleave(() => {
+      if (isMobile) return
+      window.clearInterval(this.typingInterval)
+    })
   }
+
+  simulatingDeleting() {}
 
   simulateTyping() {
     if (messages.length - 1 < this.currentLine) {
-      window.clearInterval(this.typingInteval)
+      window.clearInterval(this.typingInterval)
       return
     }
 
@@ -64,9 +78,9 @@ class Web {
   clickKey(keys) {
     let length = keys.length
     let idx = Math.floor(Math.random() * length)
-    jQuery(keys[idx]).css('transform', 'translateY(2px)')
+    $(keys[idx]).css('transform', 'translateY(2px)')
     window.setTimeout(() => {
-      jQuery(keys[idx]).css('transform', 'translateY(0px)')
+      $(keys[idx]).css('transform', 'translateY(0px)')
     }, 100)
   }
 }

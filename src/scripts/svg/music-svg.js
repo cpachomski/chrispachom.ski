@@ -1,24 +1,45 @@
 import $ from 'jquery'
+import { isMobile } from '../util'
 
 class Music {
   constructor(el) {
     this.svgContainer = $(el).find('#music-svg')
     this.speakerPaths = $(el).find('#speaker path')
+    this.containingButton = $(el).parent()
     this.ampPath = $(el).find('#amplifier')
     this.ampLight = $(el).find('#amp-light')
 
-    setTimeout(() => {
-      setInterval(() => {
-        this.simulateSpeakerVibration()
-      }, 50)
-      this.ampLight.css({
-        fill: '#ff0000'
-      })
+    this.containingButton.mouseenter(() => {
+      if (isMobile) return
+      this.handleMouseEnter()
+    })
 
-      setInterval(() => {
-        this.simulateAmplifierShaking()
-      }, 100)
-    }, 1000)
+    this.containingButton.mouseleave(() => {
+      if (isMobile) return
+      this.handleMouseLeave()
+    })
+  }
+
+  handleMouseEnter() {
+    this.speakerInterval = window.setInterval(() => {
+      this.simulateSpeakerVibration()
+    }, 50)
+
+    this.amplifierInterval = window.setInterval(() => {
+      this.simulateAmplifierShaking()
+    }, 100)
+
+    this.ampLight.css({
+      fill: '#ff0000'
+    })
+  }
+
+  handleMouseLeave() {
+    window.clearInterval(this.speakerInterval)
+    window.clearInterval(this.amplifierInterval)
+    this.ampLight.css({
+      fill: '#333'
+    })
   }
 
   simulateSpeakerVibration() {
@@ -42,16 +63,6 @@ class Music {
         transform: 'rotate(1deg)'
       })
     }, 10)
-  }
-
-  handleMouseEnter(ev) {}
-
-  handleMouseLeave(ev) {
-    this.ampLight.css({
-      fill: '#000000'
-    })
-    window.clearInterval(this.ampInterval)
-    window.clearInterval(this.speakerInterval)
   }
 }
 

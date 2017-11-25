@@ -36,4 +36,14 @@
       }
     }
   }
+
+  .grid-container {
+    position: relative;
+
+    > a {
+      display: inline-block;
+      max-width: 25%;
+      padding: 0px 5px;
+    }
+  }
 }

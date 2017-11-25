@@ -48,14 +48,3 @@ $(document).ready(() => {
     }
   })
 })
-
-function isScrolledIntoView($el) {
-  const windowTop = $(window).scrollTop() - 25
-  const windowBottom = windowTop + $(window).height()
-
-  const elTop = $el.offset().top
-  const elBottom = elTop + $el.height()
-
-  console.log($el, elBottom <= windowBottom && elTop >= windowTop)
-  return elBottom <= windowBottom && elTop >= windowTop
-}
