@@ -55,7 +55,7 @@ class Header extends React.Component {
         </Title>
         <Icons>
           {['email', 'linkedin', 'github'].map(property => (
-            <IconLink property={property} />
+            <IconLink key={uuid()} property={property} />
           ))}
         </Icons>
       </HeaderContainer>

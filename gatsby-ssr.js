@@ -1,20 +1,22 @@
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import { ServerStyleSheet, StyleSheetManger } from 'styled-components'
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
 
 exports.replaceRenderer = ({
   bodyComponent,
   replaceBodyHTMLString,
   setHeadComponents,
-}) => {
-  const styleSheet = new ServerStyleSheet()
+}) =>
+  new Promise(resolve => {
+    const sheet = new ServerStyleSheet()
 
-  const App = (
-    <StyleSheetManger shee={styleSheet.instance}>
-      {bodyComponent}
-    </StyleSheetManger>
-  )
+    const App = (
+      <StyleSheetManager sheet={sheet.instance}>
+        {bodyComponent}
+      </StyleSheetManager>
+    )
 
-  replaceBodyHTMLString(renderToString(App))
-  setHeadComponents([styleSheet.getStyleElement()])
-}
+    replaceBodyHTMLString(renderToString(App))
+    setHeadComponents([sheet.getStyleElement()])
+    resolve()
+  })
