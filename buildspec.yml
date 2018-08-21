@@ -21,6 +21,6 @@ phases:
       - echo Nice Going Gatsby! Build finished successfully.
   post_build:
     commands:
-      - aws s3 sync output s3://chrispachom.ski
+      - aws s3 sync public s3://chrispachom.ski
     finally:
       - echo Artifact pushed to s3 successfully.
