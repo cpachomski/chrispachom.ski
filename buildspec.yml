@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing everything...
+      - npm install
+    finally:
+      - echo Dependencies installed successfully.
+  pre_build:
+    commands:
+      - echo Running tests...
+      - npm run test
+    finally:
+      - echo Tests passed successfully.
+ build:
+    commands:
+      - echo Building Gatsby...
+      - npm run build
+    finally:
+      - echo Nice Going Gatsby! Build finished successfully.
+  post_build:
+    commands:
+      - echo All Done. Bye!
+artifacts:
+  files:
+    - '**/*'

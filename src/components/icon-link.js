@@ -9,7 +9,7 @@ const icons = {
   },
   email: {
     className: 'fa fa-at',
-    url: '"mailto:cpachomski@gmail.com',
+    url: 'mailto:cpachomski@gmail.com',
   },
   linkedin: {
     className: 'fa fa-linkedin-square',
