@@ -24,6 +24,5 @@ phases:
       - echo All Done. Bye!
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'public'
+    - 'public/*'
   discard-paths: yes
