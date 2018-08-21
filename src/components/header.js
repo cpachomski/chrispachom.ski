@@ -8,6 +8,7 @@ import VerticalText from './vertical-text'
 
 const HeaderContainer = styled.div`
   height: calc(100vh - 28px);
+  min-height: 500px;
   z-index: 100;
   display: flex;
   flex-direction: column;
