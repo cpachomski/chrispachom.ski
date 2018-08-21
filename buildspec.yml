@@ -21,6 +21,7 @@ phases:
       - echo Nice Going Gatsby! Build finished successfully.
   post_build:
     commands:
-      - aws s3 sync public s3://chrispachom.ski
+      - aws s3 sync public/ s3://chrispachom.ski
+      - aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --paths *
     finally:
       - echo Artifact pushed to s3 successfully.
