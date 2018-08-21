@@ -25,3 +25,4 @@ phases:
 artifacts:
   files:
     - 'public/*'
+  base_directory: 'public'
