@@ -13,7 +13,7 @@ phases:
       - npm run test
     finally:
       - echo Tests passed successfully.
- build:
+  build:
     commands:
       - echo Building Gatsby...
       - npm run build
