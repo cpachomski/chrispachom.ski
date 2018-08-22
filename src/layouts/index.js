@@ -4,21 +4,6 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import 'normalize.css'
 
-import Header from '../components/header'
-
-const PageLayout = styled.div`
-  display: flex;
-  overflow: hidden;
-`
-
-const PageContent = styled.div`
-  width: calc(100vw - 75px);
-  height: 100vh;
-  padding: 0 15px;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-`
-
 const Layout = ({ children }) => (
   <div>
     <Helmet>
