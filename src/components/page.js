@@ -29,7 +29,7 @@ const Page = ({ children }) => (
 )
 
 Page.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
 }
 
 export default Page

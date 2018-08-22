@@ -13,17 +13,15 @@ class Monitor extends React.Component {
   static propTypes = {
     attributionId: PropTypes.string,
     attributionText: PropTypes.string,
-    animate: PropTypes.bool,
   }
 
   static defaultProps = {
     attributionId: 'speaker-attribution',
     attributionText: 'Created by Bakunetsu Kaito from the noun project.',
-    animate: true,
   }
 
   render() {
-    const { attributionId, attributionText, animate } = this.props
+    const { attributionId, attributionText } = this.props
 
     return (
       <MonitorSvg

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Amplifier from '../components/amplifier'
 import ComputerDesktop from '../components/computer-desktop'
 import Header from '../components/header'
-import Layout from '../components/layout'
+import Page from '../components/page'
 import MeAtWork from '../components/me-at-work'
 
 const PageLayout = styled.div`

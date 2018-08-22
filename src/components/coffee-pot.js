@@ -26,7 +26,7 @@ class CoffeePot extends React.Component {
   }
 
   render() {
-    const { attributionId, attributionText, animating } = this.props
+    const { attributionId, attributionText } = this.props
 
     return (
       <CoffeePotSvg
