@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   overflow: hidden;
 
   > *:first-child {
+    height: 62%;
     position: absolute;
     left: 50%;
     top: 15%;

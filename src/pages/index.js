@@ -24,9 +24,9 @@ const IndexPage = () => (
   <PageLayout>
     <Header siteTitle="Chris Pachomski" />
     <PageContent>
-      <Amplifier />
+      <Amplifier animate />
       <ComputerDesktop />
-      <MeAtWork />
+      <MeAtWork animate />
       <Link to="/page-2/">Go to page 2</Link>
     </PageContent>
   </PageLayout>

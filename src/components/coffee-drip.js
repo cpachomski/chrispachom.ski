@@ -50,7 +50,7 @@ class CoffeeDrip extends React.Component {
         viewBox="0 0 100 125"
         animate={animate}
       >
-        <path d="M 0 0 L 0 54" />
+        <path d="M 0 0 L 0 125" />
         <text id={attributionId}>{attributionText}</text>
       </CoffeeDripSvg>
     )
