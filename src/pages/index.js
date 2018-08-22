@@ -2,9 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import Header from '../components/header'
 import Amplifier from '../components/amplifier'
 import ComputerDesktop from '../components/computer-desktop'
+import Header from '../components/header'
+import Layout from '../components/layout'
 import MeAtWork from '../components/me-at-work'
 
 const PageLayout = styled.div`
@@ -21,15 +22,17 @@ const PageContent = styled.div`
 `
 
 const IndexPage = () => (
-  <PageLayout>
-    <Header siteTitle="Chris Pachomski" />
-    <PageContent>
-      <Amplifier animate />
-      <ComputerDesktop />
-      <MeAtWork animate />
-      <Link to="/page-2/">Go to page 2</Link>
-    </PageContent>
-  </PageLayout>
+  <Page>
+    <PageLayout>
+      <Header siteTitle="Chris Pachomski" />
+      <PageContent>
+        <Amplifier animate />
+        <ComputerDesktop />
+        <MeAtWork animate />
+        <Link to="/page-2/">Go to page 2</Link>
+      </PageContent>
+    </PageLayout>
+  </Page>
 )
 
 export default IndexPage

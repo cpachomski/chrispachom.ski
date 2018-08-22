@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 import 'normalize.css'
 
-const Layout = ({ children }) => (
+const Page = ({ children }) => (
   <div>
     <Helmet>
       <title>chrispachom.ski</title>
@@ -25,12 +24,12 @@ const Layout = ({ children }) => (
       />
     </Helmet>
 
-    <div>{children()}</div>
+    <div>{children}</div>
   </div>
 )
 
-Layout.propTypes = {
+Page.propTypes = {
   children: PropTypes.func,
 }
 
-export default Layout
+export default Page
