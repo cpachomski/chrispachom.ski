@@ -40,10 +40,7 @@ const Layout = ({ children }) => (
       />
     </Helmet>
 
-    <PageLayout>
-      <Header siteTitle="Chris Pachomski" />
-      <PageContent>{children()}</PageContent>
-    </PageLayout>
+    <div>{children()}</div>
   </div>
 )
 
