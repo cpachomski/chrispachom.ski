@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Exterior, Svg } from './styled'
-import Speaker from '../speaker'
+import Speaker from './speaker'
 
 const Amplifier = ({ attributionId, attributionText, isAnimating }) => (
   <Exterior isAnimating={isAnimating}>

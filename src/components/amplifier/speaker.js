@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Svg } from './styled'
 
-const Speaker = ({ attributionId, attributionText, animating }) => (
+const Speaker = ({ attributionId, attributionText }) => (
   <Svg
     aria-labelledby={attributionId}
     xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,6 @@ const Speaker = ({ attributionId, attributionText, animating }) => (
     y="0px"
     viewBox="0 0 96 120"
     enable-background="new 0 0 96 96"
-    animating={animating}
   >
     <g>
       <path d="M48,96C21.533,96,0,74.467,0,48S21.533,0,48,0s48,21.533,48,48S74.467,96,48,96z M48,4   C23.738,4,4,23.738,4,48s19.738,44,44,44s44-19.738,44-44S72.262,4,48,4z" />
@@ -29,13 +28,11 @@ const Speaker = ({ attributionId, attributionText, animating }) => (
 Speaker.propTypes = {
   attributionId: PropTypes.string,
   attributionText: PropTypes.string,
-  animating: PropTypes.bool,
 }
 
 Speaker.defaultProps = {
   attributionId: 'speaker-attribution',
   attributionText: 'Created by Yaroslav Samoylov from the noun project.',
-  animating: true,
 }
 
 export default Speaker

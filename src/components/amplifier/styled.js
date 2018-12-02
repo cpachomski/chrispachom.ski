@@ -38,6 +38,7 @@ export const Exterior = styled.div`
     transform-origin: center center;
     width: 50%;
     height: 50%;
+    fill: white;
 
     animation: ${props =>
       props.isAnimating
