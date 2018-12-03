@@ -12,7 +12,9 @@ phases:
       - echo Dependencies installed successfully.
   pre_build:
     commands:
-      - echo Running tests...
+      - echo Building Storybook...
+      - npm run storybook:Build
+      - echo Running Tests...
       - npm run test
     finally:
       - echo Tests passed successfully.
