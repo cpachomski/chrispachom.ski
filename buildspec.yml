@@ -4,6 +4,8 @@ phases:
   install:
     commands:
       - echo Installing everything...
+      - sudo apt-get update
+      - sudo apt-get --assume-yes install chromium-browser
       - npm i npm@latest -g
       - npm install
     finally:
