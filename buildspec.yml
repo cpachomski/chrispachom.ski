@@ -7,12 +7,12 @@ phases:
       - npm install
     finally:
       - echo Dependencies installed successfully.
-  pre_build:
-    commands:
-      - echo Running tests...
-      - npm run test
-    finally:
-      - echo Tests passed successfully.
+  # pre_build:
+  #   commands:
+  #     - echo Running tests...
+  #     - npm run test
+  #   finally:
+  #     - echo Tests passed successfully.
   build:
     commands:
       - echo Building Gatsby...
