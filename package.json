@@ -27,9 +27,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o .storybook/.out",
+    "storybook:build": "NODE_ENV=production build-storybook -c .storybook -o .storybook/.out",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "NODE_ENV=test npm run storybook:build && jest",
+    "test": "npm run storybook:buil && NODE_ENV=test jest",
     "test:watch": "npm run test --watchAll"
   },
   "devDependencies": {
