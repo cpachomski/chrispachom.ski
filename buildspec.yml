@@ -13,7 +13,7 @@ phases:
   pre_build:
     commands:
       - echo Running tests...
-      - npm run test
+      - NODE_ENV=CI npm run test:base
     finally:
       - echo Tests passed successfully.
   build:

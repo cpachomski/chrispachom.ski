@@ -1,9 +1,14 @@
+import path from 'path'
 import registerRequireContextHook from 'babel-plugin-require-context-hook/register'
 import initStoryshots from '@storybook/addon-storyshots'
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer'
 
+console.log(path.resolve(__dirname, '.out'))
+
 registerRequireContextHook()
 initStoryshots({
   suite: 'Image storyshots',
-  test: imageSnapshot({ storybookUrl: 'http://localhost:9001' }),
+  test: imageSnapshot({
+    storybookUrl: `file://${path.resolve(__dirname, '.out')}`,
+  }),
 })
