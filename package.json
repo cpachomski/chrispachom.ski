@@ -29,7 +29,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "NODE_ENV=production build-storybook -c .storybook -o .storybook/.out",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "npm run storybook:buil && NODE_ENV=test jest",
+    "test": "npm run storybook:build && NODE_ENV=test jest",
     "test:watch": "npm run test --watchAll"
   },
   "devDependencies": {
