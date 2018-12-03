@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - echo Installing everything...
+      - npm i npm@latest -g
       - npm install
     finally:
       - echo Dependencies installed successfully.
