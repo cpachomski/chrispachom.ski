@@ -10,7 +10,7 @@ phases:
       - npm install
     finally:
       - echo Dependencies installed successfully.
-  build:
+  pre_build:
     commands:
       - echo Building Gatsby...
       - npm run build
