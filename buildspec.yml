@@ -10,20 +10,16 @@ phases:
       - npm install
     finally:
       - echo Dependencies installed successfully.
-  pre_build:
+  build:
     commands:
+      - echo Building Gatsby...
+      - npm run build
       - echo Building Storybook...
       - npm run storybook:build
       - echo Running Tests...
       - npm run test
     finally:
-      - echo Tests passed successfully.
-  build:
-    commands:
-      - echo Building Gatsby...
-      - npm run build
-    finally:
-      - echo Nice Going Gatsby! Build finished successfully.
+      - echo Nice Going Gatsby! Build and Tests finished successfully.
   post_build:
     commands:
       - aws s3 sync public/ s3://chrispachom.ski
