@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Amplifier from '../components/amplifier'
+import SillyMan from '../components/silly-man'
 
-const IndexPage = () => <Amplifier isAnimating={true} />
+const IndexPage = () => <SillyMan isAnimating={true} />
 
 export default IndexPage
