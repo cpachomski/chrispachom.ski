@@ -3,8 +3,6 @@ import registerRequireContextHook from 'babel-plugin-require-context-hook/regist
 import initStoryshots from '@storybook/addon-storyshots'
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer'
 
-console.log(path.resolve(__dirname, '.out'))
-
 registerRequireContextHook()
 initStoryshots({
   suite: 'Image storyshots',
