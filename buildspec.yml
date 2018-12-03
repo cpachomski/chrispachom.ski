@@ -13,7 +13,7 @@ phases:
   pre_build:
     commands:
       - echo Building Storybook...
-      - npm run storybook:Build
+      - npm run storybook:build
       - echo Running Tests...
       - npm run test
     finally:
