@@ -1,7 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
+import SinkingPlatform from '../components/Sinking-platform'
 
-import CoffePot from '../components/coffee-pot'
+const Page = styled.div`
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+`
 
-const IndexPage = () => <CoffePot />
+const IndexPage = () => (
+  <Page>
+    <SinkingPlatform />
+  </Page>
+)
 
 export default IndexPage
