@@ -1,7 +1,7 @@
 import React from 'react'
 
-import SillyMan from '../components/silly-man'
+import CoffePot from '../components/coffee-pot'
 
-const IndexPage = () => <SillyMan isAnimating={true} />
+const IndexPage = () => <CoffePot />
 
 export default IndexPage
