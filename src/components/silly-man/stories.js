@@ -4,7 +4,14 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 import SillyMan from './'
 
 const Container = ({ children }) => (
-  <div style={{ maxWidth: '500px', margin: '0 auto' }}>{children}</div>
+  <div
+    style={{
+      maxWidth: '300px',
+      margin: '200px auto',
+    }}
+  >
+    {children}
+  </div>
 )
 
 storiesOf('SillyMan', module)
