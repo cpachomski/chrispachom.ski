@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SinkingPlatform from '../components/Sinking-platform'
+import SinkingPlatform from '../components/sinking-platform'
 
 const Page = styled.div`
   display: flex;
