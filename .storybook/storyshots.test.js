@@ -20,6 +20,7 @@ const beforeScreenshot = (page, { context: { kind, story }, url }) => {
 registerRequireContextHook()
 initStoryshots({
   suite: 'Image storyshots',
+  storyNameRegex: /defaultProps/,
   test: imageSnapshot({
     storybookUrl: `file://${path.resolve(__dirname, '.out')}`,
     getMatchOptions,
