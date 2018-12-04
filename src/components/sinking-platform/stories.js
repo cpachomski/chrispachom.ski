@@ -2,7 +2,6 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import SinkingPlatform from './'
-import Amplifier from '../amplifier'
 
 const Container = ({ children }) => (
   <div
