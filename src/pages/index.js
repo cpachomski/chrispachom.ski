@@ -1,6 +1,8 @@
+import './fonts.css'
 import React from 'react'
 import styled from 'styled-components'
 import SinkingPlatform from '../components/sinking-platform'
+import Header from '../components/header'
 
 const Page = styled.div`
   display: flex;
@@ -9,10 +11,14 @@ const Page = styled.div`
   align-items: center;
 `
 
-const IndexPage = () => (
-  <Page>
-    <SinkingPlatform />
-  </Page>
-)
+const IndexPage = () => {
+  return (
+    <Page>
+      <SinkingPlatform isSunken={false}>
+        <Header />
+      </SinkingPlatform>
+    </Page>
+  )
+}
 
 export default IndexPage
