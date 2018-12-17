@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Exterior = styled.div`
   width: 100%;
-  max-width: 640px;
-  height: 768px;
+  max-width: 480px;
+  height: 640px;
   border: 4px solid #000;
 
   box-shadow: ${props =>
