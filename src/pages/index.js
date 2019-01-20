@@ -1,8 +1,8 @@
 import './fonts.css'
+import './reset.css'
 
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import SinkingPlatform from '../components/sinking-platform'
 import ComputerDesktop from '../components/computer-desktop'
 import Amplifier from '../components/amplifier'
 import Header from '../components/header'
@@ -10,7 +10,6 @@ import MeAtWork from '../components/me-at-work'
 
 const Page = styled.div`
   display: flex;
-  margin: 50px 0px;
   justify-content: center;
   align-items: center;
 `
@@ -20,6 +19,36 @@ const Button = styled.button`
   background: transparent;
   border: none;
   outline: none;
+`
+
+export const Shell = styled.div`
+  max-width: 1100px;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 100px 50px repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 50px;
+
+  > *:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+
+  > *:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  > *:nth-child(3) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+
+  > *:nth-child(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
 `
 
 class IndexPage extends Component {
@@ -34,7 +63,7 @@ class IndexPage extends Component {
   render() {
     return (
       <Page>
-        <SinkingPlatform isSunken={this.state.platformIsSunken}>
+        <Shell>
           <Header />
           <Button>
             <h1>Work</h1>
@@ -48,7 +77,7 @@ class IndexPage extends Component {
             <h1>Music</h1>
             <Amplifier />
           </Button>
-        </SinkingPlatform>
+        </Shell>
       </Page>
     )
   }
