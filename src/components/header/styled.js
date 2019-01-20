@@ -5,10 +5,10 @@ export const Column = styled.div`
   height: 100%;
   max-width: 100px;
   box-sizing: border-box;
-  padding: 10px 15px;
+  padding-bottom: 25px;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 `
 export const Row = styled.div`
   display: flex;
