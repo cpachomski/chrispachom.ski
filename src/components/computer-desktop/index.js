@@ -1,7 +1,7 @@
 import React from 'react'
 import { Scene } from './styled'
-import Keyboard from '../keyboard'
-import Monitor from '../monitor'
+import Keyboard from './keyboard'
+import Monitor from './monitor'
 
 const ComputerDestkop = ({ isAnimating }) => {
   return (

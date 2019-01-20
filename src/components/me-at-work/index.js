@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Scene } from './styled'
-import CoffeeDrip from '../coffee-drip'
-import CoffeePot from '../coffee-pot'
-import SillySillyMan from '../silly-man'
+import CoffeeDrip from './coffee-drip'
+import CoffeePot from './coffee-pot'
+import SillySillyMan from './silly-man'
 
 const MeAtWork = ({ isAnimating }) => (
   <Scene>
