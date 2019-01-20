@@ -6,7 +6,7 @@ class Monitor extends React.Component {
   static propTypes = {
     attributionId: PropTypes.string,
     attributionText: PropTypes.string,
-    isAnimating: PropTypes.boolean,
+    isAnimating: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -26,7 +26,7 @@ class Monitor extends React.Component {
         x="0px"
         y="0px"
         viewBox="0 0 100 100"
-        enable-background="new 0 0 100 100"
+        enableBackground="new 0 0 100 100"
       >
         <path d="M75.411,84.922c1.39,0,2.521,1.131,2.521,2.521s-1.131,2.521-2.521,2.521h-50.82c-1.39,0-2.521-1.131-2.521-2.521  s1.131-2.521,2.521-2.521h18.118h14.584H75.411z" />
         <rect x="44.216" y="71.846" width="11.57" height="11.57" />

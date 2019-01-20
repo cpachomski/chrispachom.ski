@@ -14,7 +14,7 @@ const MeAtWork = ({ isAnimating }) => (
 )
 
 MeAtWork.propTypes = {
-  isAnimating: PropTypes.boolean,
+  isAnimating: PropTypes.bool,
 }
 
 MeAtWork.defaultProps = {

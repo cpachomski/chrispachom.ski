@@ -3,8 +3,31 @@ import styled from 'styled-components'
 export const Exterior = styled.div`
   width: 100%;
   max-width: 480px;
-  height: 640px;
+  margin: 15px;
   border: 4px solid #000;
+  display: grid;
+  grid-template-columns: 100px 25px repeat(5, 1fr) 25px;
+  grid-template-rows: repeat(3, 1fr);
+
+  > *:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+
+  > *:nth-child(2) {
+    grid-column: 4 / 7;
+    grid-row: 1;
+  }
+
+  > *:nth-child(3) {
+    grid-column: 4 / 7;
+    grid-row: 2 / 3;
+  }
+
+  > *:nth-child(4) {
+    grid-column: 4 / 7;
+    grid-row: 3 / 4;
+  }
 
   box-shadow: ${props =>
     props.isSunken

@@ -35,8 +35,11 @@ class Keyboard extends React.Component {
     }, 50)
   }
 
-  startTyping = () =>
-    (this.typingInterval = setInterval(this.simulateTyping, 50))
+  startTyping = () => {
+    if (this.svg && this.svg.current) {
+      this.typingInterval = setInterval(this.simulateTyping, 50)
+    }
+  }
 
   stopTyping = () => clearInterval(this.typingInterval)
 

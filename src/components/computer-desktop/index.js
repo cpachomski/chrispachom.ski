@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Scene } from './styled'
 import Keyboard from '../keyboard'
 import Monitor from '../monitor'
