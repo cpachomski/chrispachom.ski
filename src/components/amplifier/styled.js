@@ -19,6 +19,7 @@ const speakerAnimation = keyframes`
 
 export const Exterior = styled.div`
   position: relative;
+  width: 100%;
 
   > *:first-child {
     animation: ${props =>
