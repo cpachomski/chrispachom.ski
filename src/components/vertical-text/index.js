@@ -3,20 +3,19 @@ import PropTypes from 'prop-types'
 import uuid from 'uuid/v1'
 import { Character } from './styled'
 
-const VerticalText = ({ text }) => (
+const VerticalText = ({ text = 'Words', size = 30 }) => (
   <div>
     {text.split('').map(character => (
-      <Character key={uuid()}>{character}</Character>
+      <Character style={{ fontSize: `${size}px` }} key={uuid()}>
+        {character}
+      </Character>
     ))}
   </div>
 )
 
 VerticalText.propTypes = {
   text: PropTypes.string,
-}
-
-VerticalText.defaultProps = {
-  text: 'Words',
+  size: PropTypes.number,
 }
 
 export default VerticalText
