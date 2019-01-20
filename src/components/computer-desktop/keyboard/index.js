@@ -26,17 +26,21 @@ class Keyboard extends React.Component {
   }
 
   simulateTyping = () => {
-    const keys = this.svg.current.querySelectorAll('g g path.key')
-    const pressedKey = keys[Math.floor(Math.random() * keys.length)]
+    if (this.svg && this.svg.current) {
+      const keys = this.svg.current.querySelectorAll('g g path.key')
+      const pressedKey = keys[Math.floor(Math.random() * keys.length)]
 
-    pressedKey.style.transform = 'translateY(1px)'
-    setTimeout(() => {
-      pressedKey.style.transform = 'translateY(-0px)'
-    }, 50)
+      pressedKey.style.transform = 'translateY(1px)'
+      setTimeout(() => {
+        pressedKey.style.transform = 'translateY(-0px)'
+      }, 50)
+    } else {
+      clearInterval(this.typingInterval)
+    }
   }
 
   startTyping = () => {
-    if (this.svg && this.svg.current) {
+    if (!this.typingInterval) {
       this.typingInterval = setInterval(this.simulateTyping, 50)
     }
   }

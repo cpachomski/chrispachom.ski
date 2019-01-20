@@ -116,9 +116,9 @@ class IndexPage extends Component {
       <Router>
         <Layout path="/">
           <Content path="/">
-            <Section section="work" path="work" />
-            <Section section="code" path="code" />
-            <Section section="music" path="music" />
+            <Section section="work" exact path="work" />
+            <Section section="code" exact path="code" />
+            <Section section="music" exact path="music" />
           </Content>
         </Layout>
       </Router>
