@@ -2,94 +2,52 @@ import './fonts.css'
 import './reset.css'
 
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import { Router } from '@reach/router'
+import { Grid, Flex, Content } from './styled'
+import Link from '../components/link'
 import ComputerDesktop from '../components/computer-desktop'
 import Amplifier from '../components/amplifier'
 import Header from '../components/header'
 import MeAtWork from '../components/me-at-work'
 import VerticalText from '../components/vertical-text'
+import Section from '../section'
 
-const Page = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const Button = styled.button`
-  text-align: center;
-  background: transparent;
-  border: none;
-  width: 100%;
-  height: 100%;
-  max-height: 250px;
-  max-width: 250px;
-  padding-right: 25px;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-self: end;
-  border: 4px solid transparent;
-  transition: border-color;
-
-  > *:first-child {
-    margin-right: 25px;
-  }
-
-  &:hover {
-    cursor: pointer;
-    border-color: black;
-  }
-`
-
-export const Shell = styled.div`
-  max-width: 1400px;
-  width: 100%;
-  height: 100vh;
-  padding: 30px;
-  box-sizing: border-box;
-
-  display: grid;
-  grid-template-columns: 100px 1fr 250px;
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 25px;
-  align-items: center;
-  justify-items: center;
-
-  > *:first-child {
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
-  }
-
-  > *:nth-child(2) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 4;
-  }
-
-  > *:nth-child(3) {
-    grid-column: 3;
-    grid-row: 1 / 2;
-    align-self: start;
-  }
-
-  > *:nth-child(4) {
-    grid-column: 3;
-    grid-row: 2 / 3;
-  }
-
-  > *:nth-child(5) {
-    grid-column: 3;
-    grid-row: 3;
-    align-self: end;
-  }
-`
-
-const Content = styled.div`
-  border: 4px solid black;
-  height: 100%;
-  width: 100%;
-`
+const Layout = ({ children }) => (
+  <Grid>
+    <Header />
+    {children}
+    <Flex>
+      <Link to="/work">
+        {({ isHovered }) => [
+          <MeAtWork isAnimating={isHovered} />,
+          <VerticalText size={25} text="Work" />,
+        ]}
+      </Link>
+      <Link to="/code">
+        {({ isHovered }) => [
+          <ComputerDesktop isAnimating={isHovered} />,
+          <VerticalText size={25} text="Code" />,
+        ]}
+      </Link>
+      <Link to="/music">
+        {({ isHovered }) => [
+          <Amplifier isAnimating={isHovered} />,
+          <VerticalText size={25} text="Music" />,
+        ]}
+      </Link>
+    </Flex>
+  </Grid>
+)
 
 class IndexPage extends Component {
+  static routes = [
+    {
+      key: 'code',
+      path: '/code',
+      component: () => <Content />,
+    },
+  ]
+
   state = {
     platformIsSunken: true,
     hovered: null,
@@ -101,33 +59,15 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Page>
-        <Shell>
-          <Header />
-          <Content />
-          <Button
-            onMouseEnter={() => this.setState({ hovered: 'work' })}
-            onMouseLeave={() => this.setState({ hovered: false })}
-          >
-            <MeAtWork isAnimating={this.state.hovered === 'work'} />
-            <VerticalText size={25} text="Work" />
-          </Button>
-          <Button
-            onMouseEnter={() => this.setState({ hovered: 'code' })}
-            onMouseLeave={() => this.setState({ hovered: false })}
-          >
-            <ComputerDesktop isAnimating={this.state.hovered === 'code'} />
-            <VerticalText size={25} text="Code" />
-          </Button>
-          <Button
-            onMouseEnter={() => this.setState({ hovered: 'music' })}
-            onMouseLeave={() => this.setState({ hovered: false })}
-          >
-            <Amplifier isAnimating={this.state.hovered === 'music'} />
-            <VerticalText size={25} text="Music" />
-          </Button>
-        </Shell>
-      </Page>
+      <Router>
+        <Layout path="/">
+          <Content path="/">
+            <Section section="work" path="work" />
+            <Section section="code" path="code" />
+            <Section section="music" path="music" />
+          </Content>
+        </Layout>
+      </Router>
     )
   }
 }

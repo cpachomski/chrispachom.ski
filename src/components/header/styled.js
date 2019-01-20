@@ -5,7 +5,6 @@ export const Column = styled.div`
   height: 100%;
   max-width: 100px;
   box-sizing: border-box;
-  padding-bottom: 25px;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;

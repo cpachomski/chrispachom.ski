@@ -19,7 +19,7 @@ export const Svg = styled.svg`
     stroke-width: 5px;
     stroke: black;
     stroke-dasharray: 107;
-    stroke-dashoffset: 106;
+    stroke-dashoffset: 107;
     animation: ${props =>
       props.isAnimating
         ? css`

@@ -1,7 +1,7 @@
-import { Link as RouterLink } from 'react-router-dom'
+import { Link } from '@reach/router'
 import styled from 'styled-components'
 
-export const A = styled(RouterLink)`
+export const A = styled(Link)`
   width: 100%;
   text-decoration: none;
   height: 250px;

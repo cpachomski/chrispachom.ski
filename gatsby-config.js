@@ -4,6 +4,10 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/*`] },
+    },
+    {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         analyzerPort: 3000,
@@ -22,6 +26,7 @@ module.exports = {
         display: 'minimal-ui',
       },
     },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
