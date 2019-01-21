@@ -21,9 +21,9 @@ class Keyboard extends React.Component {
     this.typingInterval = null
   }
 
-  componentDidUpdate() {
-    this.props.isAnimating ? this.startTyping() : this.stopTyping()
-  }
+  // componentDidUpdate() {
+  // this.props.isAnimating ? this.startTyping() : this.stopTyping()
+  // }
 
   simulateTyping = () => {
     const keys = this.svg.current.querySelectorAll('g g path.key')
