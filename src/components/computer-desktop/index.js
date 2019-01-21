@@ -7,7 +7,7 @@ const ComputerDestkop = ({ isAnimating }) => {
   return (
     <Scene>
       <Monitor isAnimating={isAnimating} />
-      <Keyboard isAnimating={isAnimating} />
+      <Keyboard isAnimating={isAnimating} inScene />
     </Scene>
   )
 }

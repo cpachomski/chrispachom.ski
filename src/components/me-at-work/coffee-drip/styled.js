@@ -10,6 +10,14 @@ const dripAnimation = keyframes`
 `
 
 export const Svg = styled.svg`
+  ${props =>
+    props.inScene
+      ? ` height: 62%;
+          position: absolute;
+          left: 50%;
+          top: 15%;`
+      : ''}
+
   path {
     stroke-width: 5px;
     stroke: black;

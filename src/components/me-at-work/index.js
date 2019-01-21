@@ -7,9 +7,9 @@ import SillySillyMan from './silly-man'
 
 const MeAtWork = ({ isAnimating }) => (
   <Scene>
-    <CoffeeDrip isAnimating={isAnimating} />
-    <CoffeePot />
-    <SillySillyMan isAnimating={isAnimating} />
+    <CoffeeDrip isAnimating={isAnimating} inScene />
+    <CoffeePot inScene />
+    <SillySillyMan isAnimating={isAnimating} inScene />
   </Scene>
 )
 

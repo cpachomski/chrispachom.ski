@@ -12,6 +12,13 @@ export const Svg = styled.svg`
   .board {
     fill: black;
   }
+
+  ${props =>
+    props.inScene
+      ? `position: relative;
+        top: -10px;
+        width: 60%;`
+      : ''}
 `
 
 export const HiddenText = styled.span`

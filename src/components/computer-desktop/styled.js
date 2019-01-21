@@ -6,10 +6,4 @@ export const Scene = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-
-  > *:nth-child(2) {
-    position: relative;
-    top: -10px;
-    width: 60%;
-  }
 `

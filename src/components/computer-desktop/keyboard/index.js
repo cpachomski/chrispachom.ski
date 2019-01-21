@@ -42,7 +42,7 @@ class Keyboard extends React.Component {
   stopTyping = () => clearInterval(this.typingInterval)
 
   render() {
-    const { attributionId, attributionText } = this.props
+    const { attributionId, attributionText, inScene } = this.props
 
     return (
       <Svg
@@ -52,6 +52,7 @@ class Keyboard extends React.Component {
         y="0px"
         viewBox="0 0 114 54.7"
         ref={this.svg}
+        inScene={inScene}
       >
         <g>
           <g>

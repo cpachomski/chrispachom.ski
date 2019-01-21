@@ -67,6 +67,15 @@ const moveEyeAnimation = keyframes`
 `
 
 export const Svg = styled.svg`
+  ${props =>
+    props.inScene
+      ? ` position: absolute;
+          left: 4%;
+          bottom: 20px;
+          width: 60%;
+          transform: rotate(-45deg);`
+      : ''}
+
   path {
     fill: black;
   }
