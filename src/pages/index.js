@@ -72,9 +72,13 @@ class IndexPage extends Component {
   }
 
   setNextSection = nextSection => {
-    this.setState({ activeSection: '' }, () => {
-      setTimeout(() => this.setState({ activeSection: nextSection }), 700)
-    })
+    const { activeSection } = this.state
+
+    if (activeSection !== nextSection) {
+      this.setState({ activeSection: '' }, () => {
+        setTimeout(() => this.setState({ activeSection: nextSection }), 900)
+      })
+    }
   }
 
   render() {
