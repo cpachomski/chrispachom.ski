@@ -24,7 +24,6 @@ const SectionItems = ({ items, delay }) => {
 const Sections = ({ section, delay }) => {
   return (
     <Transition
-      style={{ height: '100%', width: '100%' }}
       items={sections[section] || null}
       keys={section => (section ? section.sectionName : '')}
       from={{ opacity: 0 }}
