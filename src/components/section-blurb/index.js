@@ -6,6 +6,7 @@ import { Spring, config } from 'react-spring'
 const P = styled.p`
   font-family: monospace;
   font-size: 18px;
+  text-align: justify;
 `
 
 const SectionBlurb = ({ children, delay }) => {

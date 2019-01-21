@@ -1,13 +1,4 @@
-import styled, { keyframes, css } from 'styled-components'
-
-const dripAnimation = keyframes`
-  0% {
-    stroke-dashoffset: 106;
-  }
-  100% {
-    stroke-dashoffset: -106;
-  }
-`
+import styled from 'styled-components'
 
 export const Svg = styled.svg`
   ${props =>
@@ -22,13 +13,9 @@ export const Svg = styled.svg`
     stroke-width: 5px;
     stroke: black;
     stroke-dasharray: 107;
-    stroke-dashoffset: 107;
-    animation: ${props =>
-      props.isAnimating
-        ? css`
-            ${dripAnimation} 2s ease-in-out infinite;
-          `
-        : ''};
+    stroke-dashoffset: ${props => (props.isAnimating ? '0' : '107')};
+    transition: stroke-dashoffset ${props => (props.isAnimating ? '1s' : '0s')}
+      ease-in-out;
   }
 `
 
