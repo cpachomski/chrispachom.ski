@@ -14,11 +14,6 @@ import Sections from '../sections'
 const Content = styled.div`
   height: 100%;
   width: 100%;
-
-  > div {
-    height: 100%;
-    width: 100%;
-  }
 `
 
 const Flex = styled.div`
@@ -43,17 +38,14 @@ const Layout = styled.div`
   align-items: center;
   justify-items: center;
 
-  > * {
-    height: 100%;
-    width: 100%;
-  }
-
   > *:first-child {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
   }
 
   > *:nth-child(2) {
+    position: relative;
+    overflow: hidden;
     grid-column: 2 / 3;
     grid-row: 1;
   }
@@ -76,7 +68,7 @@ class IndexPage extends Component {
 
     if (activeSection !== nextSection) {
       this.setState({ activeSection: '' }, () => {
-        setTimeout(() => this.setState({ activeSection: nextSection }), 900)
+        setTimeout(() => this.setState({ activeSection: nextSection }))
       })
     }
   }
