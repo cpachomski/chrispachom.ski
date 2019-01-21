@@ -2,6 +2,7 @@ import './fonts.css'
 import './reset.css'
 
 import React, { Component } from 'react'
+import { Spring } from 'react-spring'
 import styled from 'styled-components'
 import SectionSwitcher from '../components/section-switcher'
 import ComputerDesktop from '../components/computer-desktop'
@@ -77,47 +78,53 @@ class IndexPage extends Component {
     const { activeSection } = this.state
 
     return (
-      <Layout path="/">
-        <Header />
-        <Content>
-          <Sections section={activeSection} />
-        </Content>
-        <Flex>
-          <SectionSwitcher
-            onClick={() => this.setNextSection('work')}
-            isActive={activeSection === 'work'}
-          >
-            {({ isHovered }) => (
-              <>
-                <MeAtWork isAnimating={isHovered} />
-                <VerticalText size={25} text="Work" />
-              </>
-            )}
-          </SectionSwitcher>
-          <SectionSwitcher
-            onClick={() => this.setNextSection('code')}
-            isActive={activeSection === 'code'}
-          >
-            {({ isHovered }) => (
-              <>
-                <ComputerDesktop isAnimating={isHovered} />
-                <VerticalText size={25} text="Code" />
-              </>
-            )}
-          </SectionSwitcher>
-          <SectionSwitcher
-            onClick={() => this.setNextSection('music')}
-            isActive={activeSection === 'music'}
-          >
-            {({ isHovered }) => (
-              <>
-                <Amplifier isAnimating={isHovered} />
-                <VerticalText size={25} text="Music" />
-              </>
-            )}
-          </SectionSwitcher>
-        </Flex>
-      </Layout>
+      <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} config={{ delay: 300 }}>
+        {springStyles => {
+          return (
+            <Layout style={springStyles}>
+              <Header />
+              <Content>
+                <Sections section={activeSection} />
+              </Content>
+              <Flex>
+                <SectionSwitcher
+                  onClick={() => this.setNextSection('work')}
+                  isActive={activeSection === 'work'}
+                >
+                  {({ isHovered }) => (
+                    <>
+                      <MeAtWork isAnimating={isHovered} />
+                      <VerticalText size={25} text="Work" />
+                    </>
+                  )}
+                </SectionSwitcher>
+                <SectionSwitcher
+                  onClick={() => this.setNextSection('code')}
+                  isActive={activeSection === 'code'}
+                >
+                  {({ isHovered }) => (
+                    <>
+                      <ComputerDesktop isAnimating={isHovered} />
+                      <VerticalText size={25} text="Code" />
+                    </>
+                  )}
+                </SectionSwitcher>
+                <SectionSwitcher
+                  onClick={() => this.setNextSection('music')}
+                  isActive={activeSection === 'music'}
+                >
+                  {({ isHovered }) => (
+                    <>
+                      <Amplifier isAnimating={isHovered} />
+                      <VerticalText size={25} text="Music" />
+                    </>
+                  )}
+                </SectionSwitcher>
+              </Flex>
+            </Layout>
+          )
+        }}
+      </Spring>
     )
   }
 }
