@@ -15,7 +15,7 @@ export const Gradient = styled.div`
   position: absolute;
   z-index: 50;
   width: 100%;
-  ${props => (props.position === 'top' ? 'top: 0px;' : 'bottom: 0px')}
+  ${props => (props.position === 'top' ? 'top: 0px;' : 'bottom: 0px;')}
   left: 0px;
   height: 35px;
   background: linear-gradient(
