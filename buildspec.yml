@@ -16,8 +16,6 @@ phases:
       - npm run build
       - echo Building Storybook...
       - npm run storybook:build
-      - echo Running Tests...
-      - npm run test
     finally:
       - echo Nice Going Gatsby! Build and Tests finished successfully.
   post_build:
