@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 export const Scene = styled.div`
   position: relative;
-  padding-bottom: 100%
+  padding-bottom: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: red;
 
   > *:first-child {
     height: 62%;

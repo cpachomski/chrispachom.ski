@@ -10,11 +10,6 @@ const dripAnimation = keyframes`
 `
 
 export const Svg = styled.svg`
-  text {
-    visibility: hidden;
-    transform: scale(0);
-  }
-
   path {
     stroke-width: 5px;
     stroke: black;
@@ -30,8 +25,6 @@ export const Svg = styled.svg`
 `
 
 export const HiddenText = styled.span`
-  text {
-    visibility: hidden;
-    transform: scale(0);
-  }
+  visibility: hidden;
+  transform: scale(0);
 `
