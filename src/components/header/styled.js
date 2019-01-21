@@ -13,6 +13,6 @@ export const Row = styled.div`
   display: flex;
 
   > *:first-child {
-    margin-right: 20px;
+    margin-right: 15px;
   }
 `
