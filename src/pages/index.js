@@ -2,15 +2,14 @@ import './fonts.css'
 import './reset.css'
 
 import React, { Component } from 'react'
-import { Router } from '@reach/router'
 import styled from 'styled-components'
-import Link from '../components/link'
+import SectionSwitcher from '../components/section-switcher'
 import ComputerDesktop from '../components/computer-desktop'
 import Amplifier from '../components/amplifier'
 import Header from '../components/header'
 import MeAtWork from '../components/me-at-work'
 import VerticalText from '../components/vertical-text'
-import Section from '../section'
+import Sections from '../sections'
 
 const Content = styled.div`
   height: 100%;
@@ -29,7 +28,7 @@ const Flex = styled.div`
   justify-content: space-between;
 `
 
-const Grid = styled.div`
+const Layout = styled.div`
   margin: 0 auto;
   max-width: 1400px;
   width: 100%;
@@ -66,62 +65,63 @@ const Grid = styled.div`
   }
 `
 
-const Layout = ({ children }) => (
-  <Grid>
-    <Header />
-    {children}
-    <Flex>
-      <Link to="/work">
-        {({ isHovered }) => [
-          <MeAtWork isAnimating={isHovered} />,
-          <VerticalText size={25} text="Work" />,
-        ]}
-      </Link>
-      <Link to="/code">
-        {({ isHovered }) => [
-          <ComputerDesktop isAnimating={isHovered} />,
-          <VerticalText size={25} text="Code" />,
-        ]}
-      </Link>
-      <Link to="/music">
-        {({ isHovered }) => [
-          <Amplifier isAnimating={isHovered} />,
-          <VerticalText size={25} text="Music" />,
-        ]}
-      </Link>
-    </Flex>
-  </Grid>
-)
-
 class IndexPage extends Component {
-  static routes = [
-    {
-      key: 'code',
-      path: '/code',
-      component: () => <Content />,
-    },
-  ]
-
   state = {
-    platformIsSunken: true,
     hovered: null,
+    activeSection: '',
   }
 
-  componentDidMount() {
-    setTimeout(() => this.setState({ platformIsSunken: false }), 500)
+  setNextSection = nextSection => {
+    this.setState({ activeSection: '' }, () => {
+      setTimeout(() => this.setState({ activeSection: nextSection }), 700)
+    })
   }
 
   render() {
+    const { activeSection } = this.state
+
     return (
-      <Router>
-        <Layout path="/">
-          <Content path="/">
-            <Section section="work" exact path="work" />
-            <Section section="code" exact path="code" />
-            <Section section="music" exact path="music" />
-          </Content>
-        </Layout>
-      </Router>
+      <Layout path="/">
+        <Header />
+        <Content>
+          <Sections section={activeSection} />
+        </Content>
+        <Flex>
+          <SectionSwitcher
+            onClick={() => this.setNextSection('work')}
+            isActive={activeSection === 'work'}
+          >
+            {({ isHovered }) => (
+              <>
+                <MeAtWork isAnimating={isHovered} />
+                <VerticalText size={25} text="Work" />
+              </>
+            )}
+          </SectionSwitcher>
+          <SectionSwitcher
+            onClick={() => this.setNextSection('code')}
+            isActive={activeSection === 'code'}
+          >
+            {({ isHovered }) => (
+              <>
+                <ComputerDesktop isAnimating={isHovered} />
+                <VerticalText size={25} text="Code" />
+              </>
+            )}
+          </SectionSwitcher>
+          <SectionSwitcher
+            onClick={() => this.setNextSection('music')}
+            isActive={activeSection === 'music'}
+          >
+            {({ isHovered }) => (
+              <>
+                <Amplifier isAnimating={isHovered} />
+                <VerticalText size={25} text="Music" />
+              </>
+            )}
+          </SectionSwitcher>
+        </Flex>
+      </Layout>
     )
   }
 }

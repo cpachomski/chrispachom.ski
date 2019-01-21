@@ -4,10 +4,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/*`] },
-    },
-    {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         analyzerPort: 3000,

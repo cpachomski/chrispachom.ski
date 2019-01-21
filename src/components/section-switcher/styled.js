@@ -1,11 +1,4 @@
-import { Link } from '@reach/router'
 import styled from 'styled-components'
-
-export const A = styled(Link)`
-  width: 100%;
-  text-decoration: none;
-  height: 250px;
-`
 
 export const Button = styled.button`
   text-align: center;
@@ -20,8 +13,6 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-self: end;
-  border: 4px solid transparent;
-  transition: border-color;
 
   > *:first-child {
     margin-right: 25px;
@@ -29,6 +20,5 @@ export const Button = styled.button`
 
   &:hover {
     cursor: pointer;
-    border-color: black;
   }
 `
