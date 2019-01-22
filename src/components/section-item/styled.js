@@ -66,7 +66,9 @@ export const Bullet = styled.li`
 
 export const Links = styled.div`
   margin-left: 38px;
-  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 `
 
 export const Link = styled.a`
@@ -74,4 +76,5 @@ export const Link = styled.a`
   font-size: 14px;
   margin-right: 10px;
   font-weight: bold;
+  margin-top: 5px;
 `
