@@ -16,6 +16,12 @@ export default {
           'Developed e2e tested, compose-able, and theme-able React components within our design system.',
           'Create and maintained cloud-based CI/CD pipelines to ensure a fast turnaround time for fixes and features.',
         ],
+        links: [
+          {
+            title: 'cnn.com/business',
+            url: 'https://cnn.com/business',
+          },
+        ],
       },
       {
         key: 'cnnmoney-web-dev',
@@ -26,6 +32,16 @@ export default {
           'Developed and maintained legacy stack for existing money.cnn.com property.',
           'Developed modern React sites for CNN Media, CNN Tech, and CNN Money Switzerland brands utilizing the wonders of one-way data flow, ES6+, GraphQL, and css-in-js.',
           'Proposed and developed a novel system for serving pre-rendered React components and their dependencies via RESTful APIs, allowing for incremental adoption of React in older JS projects.',
+        ],
+        links: [
+          {
+            title: 'money.cnn.com',
+            url: 'https://money.cnn.com',
+          },
+          {
+            title: 'cnnmoney.ch',
+            url: 'https://cnnmoney.ch',
+          },
         ],
       },
       {
@@ -39,6 +55,24 @@ export default {
           'Developed server-side features within the Magento eCommerce framework (PHP).',
           'Performed accessibility audits of client applications to ensure ADA compliance.',
         ],
+        links: [
+          {
+            title: 'samedelman.com',
+            url: 'https://www.samedelman.com',
+          },
+          {
+            title: 'marahoffman.com',
+            url: 'https://www.marahoffman.com/',
+          },
+          {
+            title: 'oscardelarenta.com',
+            url: 'https://www.oscardelarenta.com',
+          },
+          {
+            title: 'crushwineco.com',
+            url: 'https://www.crushwineco.com/',
+          },
+        ],
       },
       {
         key: 'born-fe-dev',
@@ -51,6 +85,16 @@ export default {
           'Developed server-side features within the Magento eCommerce framework (PHP).',
           'Translated designs into pixel-perfect CSS.',
         ],
+        links: [
+          {
+            title: 'moroccanoil.com/spa-locator',
+            url: 'https://www.moroccanoil.com/us_en/salon-spa-locator',
+          },
+          {
+            title: 'dvf.com',
+            url: 'https://www.dvf.com/',
+          },
+        ],
       },
       {
         key: 'ironpaper-web-dev',
@@ -61,6 +105,16 @@ export default {
           'Developed custom Wordpress sites from mockup to production.',
           'Developed responsive HTML/CSS templates and pages.',
           'Integrated Google Analytics and Google Tag Manager for client specific reporting.',
+        ],
+        links: [
+          {
+            title: 'zanottitrucks.com',
+            url: 'http://zanottitrucks.com/',
+          },
+          {
+            title: 'lendkey.com',
+            url: 'https://www.lendkey.com/',
+          },
         ],
       },
     ],
