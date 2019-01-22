@@ -1,21 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-
-const Heading = styled.div`
-  display: flex;
-`
-
-const Item = styled.div``
+import {
+  Item,
+  Heading,
+  Title,
+  SubTitle,
+  Duration,
+  Bullets,
+  Bullet,
+} from './styled'
 
 const SectionItem = ({ style, title, subtitle, duration, bullets }) => {
   return (
     <Item style={style}>
-      <Heading>
-        {title && <h3>{title}</h3>}
-        {subtitle && <h3>{subtitle}</h3>}
-      </Heading>
-      {duration && <h3>{duration}</h3>}
+      <Heading>{title && <Title>{title}</Title>}</Heading>
+      <SubTitle>{subtitle}</SubTitle>
+      <Duration>{duration}</Duration>
+      <Bullets>
+        {bullets && bullets.length && bullets.map(b => <Bullet>{b}</Bullet>)}
+      </Bullets>
     </Item>
   )
 }

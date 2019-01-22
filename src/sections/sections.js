@@ -35,42 +35,6 @@ export default {
         subtitle: 'Ironpaper',
         duration: 'FEB 2018 - Present',
       },
-      {
-        key: 'onerockwell-fe-dev-2',
-        title: 'Frontend Developer',
-        subtitle: 'One Rockwell',
-        duration: 'FEB 2018 - Present',
-      },
-      {
-        key: 'born-fe-dev-2',
-        title: 'Frontend Developer',
-        subtitle: 'BORN Group',
-        duration: 'FEB 2018 - Present',
-      },
-      {
-        key: 'ironpaper-web-dev-2',
-        title: 'Web Developer',
-        subtitle: 'Ironpaper',
-        duration: 'FEB 2018 - Present',
-      },
-      {
-        key: 'onerockwell-fe-dev-3',
-        title: 'Frontend Developer',
-        subtitle: 'One Rockwell',
-        duration: 'FEB 2018 - Present',
-      },
-      {
-        key: 'born-fe-dev-3',
-        title: 'Frontend Developer',
-        subtitle: 'BORN Group',
-        duration: 'FEB 2018 - Present',
-      },
-      {
-        key: 'ironpaper-web-dev-3',
-        title: 'Web Developer',
-        subtitle: 'Ironpaper',
-        duration: 'FEB 2018 - Present',
-      },
     ],
   },
   code: {
