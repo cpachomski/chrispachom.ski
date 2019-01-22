@@ -68,7 +68,7 @@ export default {
   code: {
     key: 'section-code',
     sectionName: 'Code',
-    blurb: '* CLICKITY CLACKETY CLICK CLICK CLICK *',
+    blurb: '* CLICKITY CLACKETY CLICK *',
     items: [
       {
         key: 'code-project-hn-api',
