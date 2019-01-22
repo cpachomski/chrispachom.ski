@@ -29,6 +29,10 @@ export const Duration = styled.span`
   font-family: monospace;
 `
 
-export const Bullets = styled.ul``
+export const Bullets = styled.ul`
+  font-family: monospace;
+`
 
-export const Bullet = styled.li``
+export const Bullet = styled.li`
+  margin-bottom: 15px;
+`
