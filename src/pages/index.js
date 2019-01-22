@@ -3,7 +3,6 @@ import './reset.css'
 
 import React, { Component } from 'react'
 import { Spring } from 'react-spring'
-import MediaQuery from 'react-responsive'
 import SectionSwitcher from '../components/section-switcher'
 import ComputerDesktop from '../components/computer-desktop'
 import Amplifier from '../components/amplifier'
@@ -11,7 +10,7 @@ import Header from '../components/header'
 import MeAtWork from '../components/me-at-work'
 import VerticalText from '../components/vertical-text'
 import Sections from '../sections'
-import { Content, Flex, Layout } from './styled/index.js'
+import { Content, Flex, Layout } from '../components/layout'
 
 class IndexPage extends Component {
   state = {
@@ -48,11 +47,9 @@ class IndexPage extends Component {
                 >
                   {({ isHovered }) => (
                     <>
-                      <MediaQuery query="(min-width: 641px)">
-                        <MeAtWork
-                          isAnimating={isHovered || activeSection === 'work'}
-                        />
-                      </MediaQuery>
+                      <MeAtWork
+                        isAnimating={isHovered || activeSection === 'work'}
+                      />
                       <VerticalText size={25} text="Work" />
                     </>
                   )}
@@ -63,11 +60,9 @@ class IndexPage extends Component {
                 >
                   {({ isHovered }) => (
                     <>
-                      <MediaQuery query="(min-width: 641px)">
-                        <ComputerDesktop
-                          isAnimating={isHovered || activeSection === 'code'}
-                        />
-                      </MediaQuery>
+                      <ComputerDesktop
+                        isAnimating={isHovered || activeSection === 'code'}
+                      />
                       <VerticalText size={25} text="Code" />
                     </>
                   )}
@@ -78,11 +73,9 @@ class IndexPage extends Component {
                 >
                   {({ isHovered }) => (
                     <>
-                      <MediaQuery query="(min-width: 641px)">
-                        <Amplifier
-                          isAnimating={isHovered || activeSection === 'music'}
-                        />
-                      </MediaQuery>
+                      <Amplifier
+                        isAnimating={isHovered || activeSection === 'music'}
+                      />
                       <VerticalText size={25} text="Music" />
                     </>
                   )}

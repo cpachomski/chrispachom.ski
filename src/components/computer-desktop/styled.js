@@ -6,4 +6,8 @@ export const Scene = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 `

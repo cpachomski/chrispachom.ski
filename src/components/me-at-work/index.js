@@ -6,11 +6,19 @@ import CoffeePot from './coffee-pot'
 import SillySillyMan from './silly-man'
 
 const MeAtWork = ({ isAnimating }) => (
-  <Scene>
+  <div
+    id="sup"
+    style={{
+      position: 'relative',
+      paddingBottom: '100%',
+      width: '100%',
+      overflow: 'hidden',
+    }}
+  >
     <CoffeeDrip isAnimating={isAnimating} inScene />
     <CoffeePot inScene />
     <SillySillyMan isAnimating={isAnimating} inScene />
-  </Scene>
+  </div>
 )
 
 MeAtWork.propTypes = {

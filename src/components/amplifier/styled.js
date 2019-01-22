@@ -52,6 +52,10 @@ export const Exterior = styled.div`
   #statusLight {
     fill: ${props => (props.isAnimating ? 'red' : '')};
   }
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 `
 
 export const Svg = styled.svg`

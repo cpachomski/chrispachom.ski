@@ -13,10 +13,6 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
 
-  > *:first-child {
-    margin-right: 25px;
-  }
-
   &:hover {
     cursor: pointer;
   }
@@ -27,9 +23,5 @@ export const Button = styled.button`
 
   @media (max-width: 640px) {
     padding-right: 0px;
-
-    > *:first-child {
-      margin-right: 0px;
-    }
   }
 `

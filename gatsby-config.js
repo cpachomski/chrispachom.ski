@@ -5,14 +5,18 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-plugin-styled-components`,
-    },
-    {
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
-        analyzerPort: 3000,
-        production: true,
+        ssr: true,
+        minify: false,
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+    //   options: {
+    //     analyzerPort: 3000,
+    //     production: true,
+    //   },
+    // },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
