@@ -12,6 +12,7 @@ export const Button = styled.button`
   outline: none;
   display: flex;
   align-items: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   @media (pointer: fine) {
     &:hover {
