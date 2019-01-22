@@ -13,7 +13,7 @@ import VerticalText from '../components/vertical-text'
 import Sections from '../sections'
 
 const Content = styled.div`
-  height: 100%;
+  height: calc(100% - 100px);
   width: 100%;
 `
 
@@ -29,6 +29,7 @@ const Layout = styled.div`
   max-width: 1400px;
   width: 100%;
   height: 100vh;
+  min-height: 800px;
   padding: 30px;
   box-sizing: border-box;
 

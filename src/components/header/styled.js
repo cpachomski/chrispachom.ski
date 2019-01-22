@@ -8,6 +8,7 @@ export const Column = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 20px 0px 35px;
 `
 export const Row = styled.div`
   display: flex;

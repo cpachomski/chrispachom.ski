@@ -5,7 +5,7 @@ export const Column = styled.div`
   flex-direction: column;
   align-items: center;
 
-  > *:first-child {
+  > * {
     margin-bottom: 10px;
   }
 `

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Icon from '../icon'
 import { Column } from './styled'
 
-const IconMenu = ({ iconSize = 35 }) => (
+const IconMenu = ({ iconSize = 50 }) => (
   <Column>
     <Icon
       size={iconSize}
