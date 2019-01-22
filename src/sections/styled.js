@@ -8,6 +8,7 @@ export const Content = styled.div`
   width: calc(100% + 25px);
   height: 100%;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 25px 60px 25px 35px;
 
   @media (max-width: 641px) {
