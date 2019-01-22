@@ -30,7 +30,7 @@ export default {
       },
       {
         key: 'onerockwell-fe-dev',
-        title: 'Frontend Developer',
+        title: 'Front End Developer',
         subtitle: 'One Rockwell',
         duration: 'Feb 2016 - Aug 2016',
         bullets: [
@@ -42,7 +42,7 @@ export default {
       },
       {
         key: 'born-fe-dev',
-        title: 'Frontend Developer',
+        title: 'Front End Developer',
         subtitle: 'BORN Group',
         duration: 'Sep 2015 - Feb 2016',
         bullets: [
@@ -71,6 +71,27 @@ export default {
     blurb: '* CLICKITY CLACKETY CLICK CLICK CLICK *',
     items: [
       {
+        key: 'code-project-hn-api',
+        title: 'Hacker News API',
+        subtitle: 'Go | Docker | AWS',
+        bullets: [
+          'API to aggregate public Hacker News API entities into feeds.',
+          'Uses goroutines to make a bunch of requests really, really fast.',
+          'Dockerized for ez-pz deployment via AWS.',
+        ],
+        links: [
+          {
+            title: 'view',
+            url: 'http://hacker-news-api-dev.us-east-1.elasticbeanstalk.com/',
+          },
+          {
+            title: 'code',
+
+            url: 'https://github.com/cpachomski/hacker-news-api',
+          },
+        ],
+      },
+      {
         key: 'code-project-stockboy',
         title: 'Stockboy',
         subtitle: 'Node | Telegram',
@@ -81,6 +102,44 @@ export default {
           {
             title: 'code',
             url: 'https://github.com/cpachomski/Stockboy',
+          },
+        ],
+      },
+      {
+        key: 'code-project-verbose',
+        title: 'Verbose',
+        subtitle: 'Chrome Extension | JS | HTML | CSS',
+        bullets: [
+          '"New Tab" Chrome extension to show the current time in a most stylish way.',
+        ],
+        links: [
+          {
+            title: 'install',
+            url:
+              'https://chrome.google.com/webstore/detail/verbose/agnnjbhebjbhjdbnhmipklogdonnoekn?hl=en',
+          },
+          {
+            title: 'code',
+            url: 'https://github.com/cpachomski/verbose',
+          },
+        ],
+      },
+      {
+        key: 'code-project-gitdash',
+        title: 'GitDash',
+        subtitle: 'React | CSS',
+        bullets: [
+          'SPA for viewing project READMEs and updating tags.',
+          'Authorization/Authentication via Github. ',
+        ],
+        links: [
+          {
+            title: 'view',
+            url: 'https://gitdash.surge.sh',
+          },
+          {
+            title: 'code',
+            url: 'https://github.com/cpachomski/gitdash',
           },
         ],
       },
@@ -127,6 +186,40 @@ export default {
     ],
   },
   music: {
+    key: 'section-music',
     sectionName: 'Music',
+    blurb: 'Earplugs! Always!',
+    items: [
+      {
+        key: 'music-project-ludejaw',
+        title: 'LudeJaw',
+        subtitle: 'Guitar | Vox | Bass/Drums (sometimes)',
+        bullets: [
+          'Started at TCNJ while housebound during hurricane Sandy.',
+          '3-Piece consisting of Vox, Guitar, Bass, Drums.',
+        ],
+        links: [
+          {
+            title: 'listen',
+            url: 'https://soundcloud.com/ludejaw',
+          },
+        ],
+      },
+      {
+        key: 'music-project-ceph',
+        title: 'Cephalopods and Their Allies',
+        subtitle: 'Guitar',
+        bullets: [
+          "My good friend Dylan's solo opus, requiring many friends to fill out the instrumentals.",
+          'Toured New England and learned to love the IPA.',
+        ],
+        links: [
+          {
+            title: 'listen',
+            url: 'https://cephalopods.bandcamp.com/',
+          },
+        ],
+      },
+    ],
   },
 }
