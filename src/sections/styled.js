@@ -9,6 +9,11 @@ export const Content = styled.div`
   height: 100%;
   overflow-y: scroll;
   padding: 25px 60px 25px 35px;
+
+  @media (max-width: 641px) {
+    width: calc(100% + 15px);
+    padding: 20px 25px 25px 15px;
+  }
 `
 
 export const Gradient = styled.div`
