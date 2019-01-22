@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Item = styled.div`
   margin: 0px 0px 25px 50px;
+  font-family: monospace;
 `
 
 export const Heading = styled.div`
@@ -20,19 +21,28 @@ export const Title = styled.h3`
 export const SubTitle = styled.b`
   display: block;
   margin: 20px 0px 2px;
-  font-family: monospace;
   font-size: 14px;
   text-transform: uppercase;
 `
 
-export const Duration = styled.span`
-  font-family: monospace;
-`
+export const Duration = styled.span``
 
 export const Bullets = styled.ul`
   font-family: monospace;
 `
 
 export const Bullet = styled.li`
-  margin-bottom: 15px;
+  margin-bottom: 7px;
+`
+
+export const Links = styled.div`
+  margin-left: 38px;
+  text-align: right;
+`
+
+export const Link = styled.a`
+  color: black;
+  font-size: 14px;
+  margin-right: 10px;
+  font-weight: bold;
 `

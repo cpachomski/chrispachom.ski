@@ -8,17 +8,32 @@ import {
   Duration,
   Bullets,
   Bullet,
+  Links,
+  Link,
 } from './styled'
 
-const SectionItem = ({ style, title, subtitle, duration, bullets }) => {
+const SectionItem = ({ style, title, subtitle, duration, bullets, links }) => {
   return (
     <Item style={style}>
       <Heading>{title && <Title>{title}</Title>}</Heading>
       <SubTitle>{subtitle}</SubTitle>
       <Duration>{duration}</Duration>
-      <Bullets>
-        {bullets && bullets.length && bullets.map(b => <Bullet>{b}</Bullet>)}
-      </Bullets>
+      {bullets && (
+        <Bullets>
+          {bullets.map(b => (
+            <Bullet key={`${title}${-subtitle}-${b.slice(1, 30)}`}>{b}</Bullet>
+          ))}
+        </Bullets>
+      )}
+      {links && (
+        <Links>
+          {links.map(({ title, url }) => (
+            <Link key={url} href={url}>
+              {title}
+            </Link>
+          ))}
+        </Links>
+      )}
     </Item>
   )
 }
@@ -28,6 +43,7 @@ SectionItem.propTypes = {
   subtitle: PropTypes.string,
   duration: PropTypes.string,
   bullets: PropTypes.array,
+  links: PropTypes.array,
 }
 
 export default SectionItem
