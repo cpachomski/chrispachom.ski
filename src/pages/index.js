@@ -33,7 +33,7 @@ const Layout = styled.div`
   box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: 100px 1fr 250px;
+  grid-template-columns: 100px 100px 1fr 250px;
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 25px;
   align-items: center;
@@ -47,12 +47,12 @@ const Layout = styled.div`
   > *:nth-child(2) {
     position: relative;
     overflow: hidden;
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     grid-row: 1;
   }
 
   > *:nth-child(3) {
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 1 / 3;
     align-self: start;
   }
@@ -93,7 +93,9 @@ class IndexPage extends Component {
                 >
                   {({ isHovered }) => (
                     <>
-                      <MeAtWork isAnimating={isHovered} />
+                      <MeAtWork
+                        isAnimating={isHovered || activeSection === 'work'}
+                      />
                       <VerticalText size={25} text="Work" />
                     </>
                   )}
@@ -104,7 +106,9 @@ class IndexPage extends Component {
                 >
                   {({ isHovered }) => (
                     <>
-                      <ComputerDesktop isAnimating={isHovered} />
+                      <ComputerDesktop
+                        isAnimating={isHovered || activeSection === 'code'}
+                      />
                       <VerticalText size={25} text="Code" />
                     </>
                   )}
@@ -115,7 +119,9 @@ class IndexPage extends Component {
                 >
                   {({ isHovered }) => (
                     <>
-                      <Amplifier isAnimating={isHovered} />
+                      <Amplifier
+                        isAnimating={isHovered || activeSection === 'music'}
+                      />
                       <VerticalText size={25} text="Music" />
                     </>
                   )}
