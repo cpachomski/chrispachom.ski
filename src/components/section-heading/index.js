@@ -5,7 +5,7 @@ import { Spring, config } from 'react-spring'
 
 const H2 = styled.h2`
   margin-top: 0px;
-  font-size: 40px;
+  font-size: 70px;
   text-align: right;
   font-family: montserrat;
   text-transform: uppercase;

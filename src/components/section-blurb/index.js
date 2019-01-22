@@ -7,6 +7,7 @@ const P = styled.p`
   font-family: monospace;
   font-size: 18px;
   text-align: justify;
+  margin-bottom: 25px;
 `
 
 const SectionBlurb = ({ children, delay }) => {
