@@ -6,8 +6,22 @@ import { Spring, config } from 'react-spring'
 const P = styled.p`
   font-family: monospace;
   font-size: 18px;
-  text-align: justify;
   margin-bottom: 45px;
+
+  @media (max-width: 1199px) {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 999px) {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
 `
 
 const SectionBlurb = ({ children, delay }) => {

@@ -16,4 +16,10 @@ export const Row = styled.div`
   > *:first-child {
     margin-right: 15px;
   }
+
+  @media (max-width: 641px) {
+    > *:first-child {
+      margin-right: 7px;
+    }
+  }
 `

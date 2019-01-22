@@ -12,7 +12,6 @@ export const Button = styled.button`
   outline: none;
   display: flex;
   align-items: center;
-  justify-self: end;
 
   > *:first-child {
     margin-right: 25px;
@@ -24,5 +23,13 @@ export const Button = styled.button`
 
   &:active {
     color: #aaa;
+  }
+
+  @media (max-width: 640px) {
+    padding-right: 0px;
+
+    > *:first-child {
+      margin-right: 0px;
+    }
   }
 `

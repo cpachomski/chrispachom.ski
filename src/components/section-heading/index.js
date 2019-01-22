@@ -12,6 +12,14 @@ const H2 = styled.h2`
   font-weight: bold;
   margin-bottom: 0px;
   letter-spacing: 2px;
+
+  @media (max-width: 1199px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 999px) {
+    font-size: 50px;
+  }
 `
 
 const SectionHeading = ({ children, delay }) => (

@@ -1,4 +1,5 @@
 import React from 'react'
+import MediaQuery from 'react-responsive'
 import VerticalText from '../vertical-text'
 import { Column, Row } from './styled'
 import IconMenu from '../icon-menu'
@@ -9,7 +10,12 @@ const Header = () => (
       <VerticalText text="Chris" />
       <VerticalText text="Pachomski" />
     </Row>
-    <IconMenu />
+    <MediaQuery query="(min-width: 641px)">
+      <IconMenu iconSize={50} />
+    </MediaQuery>
+    <MediaQuery query="(max-width: 640px)">
+      <IconMenu iconSize={30} />
+    </MediaQuery>
   </Column>
 )
 
