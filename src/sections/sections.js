@@ -2,8 +2,7 @@ export default {
   work: {
     key: 'section-work',
     sectionName: 'Work',
-    blurb:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
+    blurb: `Currently tech leading at CNN Business.`,
     items: [
       {
         key: 'cnnbiz-sr-web-dev',
@@ -13,7 +12,7 @@ export default {
         bullets: [
           'Tech Lead for high impact product refresh. Managed development of microservice architectures with an emphasis on real-time streaming and one-way data flow.',
           'Mentored fellow developers on stacks, tooling, and product/development lifecycle. Conducted remote learning sessions/presentations to train and empower our global team.',
-          'Developed GraphQL APIs to aggregate RESTful services into reusable fragments, types, and queries.',
+          'Developed GraphQL APIs to aggregate RESTful services into reusable fragments, types, and queries (Node).',
           'Developed e2e tested, compose-able, and theme-able React components within our design system.',
           'Create and maintained cloud-based CI/CD pipelines to ensure a fast turnaround time for fixes and features.',
         ],
@@ -22,7 +21,7 @@ export default {
         key: 'cnnmoney-web-dev',
         title: 'Web Developer',
         subtitle: 'CNN Money',
-        duration: 'Aug 2016 - Present',
+        duration: 'Aug 2016 - Feb 2018',
         bullets: [
           'Developed and maintained legacy stack for existing money.cnn.com property.',
           'Developed modern React sites for CNN Media, CNN Tech, and CNN Money Switzerland brands utilizing the wonders of one-way data flow, ES6+, GraphQL, and css-in-js.',
@@ -33,7 +32,7 @@ export default {
         key: 'onerockwell-fe-dev',
         title: 'Frontend Developer',
         subtitle: 'One Rockwell',
-        duration: 'FEB 2018 - Present',
+        duration: 'Feb 2016 - Aug 2016',
         bullets: [
           'Developed eCommerce sites for high profile retailers.',
           'Provided design and UX insight to improve/maintain existing sites.',
@@ -45,7 +44,7 @@ export default {
         key: 'born-fe-dev',
         title: 'Frontend Developer',
         subtitle: 'BORN Group',
-        duration: 'FEB 2018 - Present',
+        duration: 'Sep 2015 - Feb 2016',
         bullets: [
           'Developed eCommerce sites for high profile retailers.',
           'Provided design and UX insight to improve/maintain existing sites.',
@@ -57,7 +56,7 @@ export default {
         key: 'ironpaper-web-dev',
         title: 'Web Developer',
         subtitle: 'Ironpaper',
-        duration: 'FEB 2018 - Present',
+        duration: 'May 2015 - Sep 2015',
         bullets: [
           'Developed custom Wordpress sites from mockup to production.',
           'Developed responsive HTML/CSS templates and pages.',
@@ -67,7 +66,65 @@ export default {
     ],
   },
   code: {
+    key: 'section-code',
     sectionName: 'Code',
+    blurb: '* CLICKITY CLACKETY CLICK CLICK CLICK *',
+    items: [
+      {
+        key: 'code-project-stockboy',
+        title: 'Stockboy',
+        subtitle: 'Node | Telegram',
+        bullets: [
+          'Telegram bot for parsing chat messages and sending stock quotes on command.',
+        ],
+        links: [
+          {
+            title: 'code',
+            url: 'https://github.com/cpachomski/Stockboy',
+          },
+        ],
+      },
+      {
+        key: 'code-project-flocking',
+        title: 'Flocking',
+        subtitle: 'JS | HTML Canvas',
+        bullets: [
+          'JS implementation of a basic flocking algorithm.',
+          'Boid vectors are calculated as a summation of cohesion, dispersion, and alignment forces.',
+        ],
+        links: [
+          {
+            title: 'view',
+            url: 'https://flocking.surge.sh',
+          },
+          {
+            title: 'code',
+            url: 'https://github.com/cpachomski/flocking',
+          },
+        ],
+      },
+      {
+        key: 'code-project-lines',
+        title: 'Lines',
+        subtitle: 'React | CSS Modules | HTML Canvas',
+        bullets: [
+          'An HTML canvas experiment for generating abstract desktop backgrounds.',
+          'Anytime the canvas is clicked, a point is added. The new point is connected to every existing point by a straight line.',
+          'Users can change the line color, background color, or use a random color generator.',
+          'Points can be added randomly via the random generator.',
+        ],
+        links: [
+          {
+            title: 'view',
+            url: 'https://lines.surge.sh',
+          },
+          {
+            title: 'code',
+            url: 'https://github.com/cpahomski/lines',
+          },
+        ],
+      },
+    ],
   },
   music: {
     sectionName: 'Music',
