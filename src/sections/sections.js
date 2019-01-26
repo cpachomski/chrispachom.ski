@@ -14,7 +14,7 @@ export default {
           'Mentored fellow developers on stacks, tooling, and product/development lifecycle. Conducted remote learning sessions/presentations to train and empower our global team.',
           'Developed GraphQL APIs to aggregate RESTful services into reusable fragments, types, and queries (Node).',
           'Developed e2e tested, compose-able, and theme-able React components within our design system.',
-          'Create and maintained cloud-based CI/CD pipelines to ensure a fast turnaround time for fixes and features.',
+          'Created and maintained cloud-based CI/CD pipelines to ensure a fast turnaround time for fixes and features.',
         ],
         links: [
           {
